@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>RE Toolkit</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<main>
+    <section id="top">
+        <div class="selector">
+            Click to upload top PCB photo <input type="file" data-target="pcb-top">
+        </div>
+        <div class="pcb" id="pcb-top-wrapper">
+            <div class="cursor"></div>
+            <div class="components" id="components-top"></div>
+            <canvas id="pcb-top"></canvas>
+        </div>
+    </section>
+    <section id="bottom">
+        <div class="selector">
+            Click to upload bottom PCB photo <input type="file" data-target="pcb-bottom">
+        </div>
+        <div class="pcb" id="pcb-bottom-wrapper">
+            <div class="cursor"></div>
+            <div class="components" id="components-bottom"></div>
+            <canvas id="pcb-bottom"></canvas>
+        </div>
+    </section>
+</main>
+<aside>
+    <h1>RE Toolkit</h1>
+    <h2>Drawing</h2>
+    <button data-type="chip" class="draw-button toggle">Add chip</button>
+    <button data-type="resistor" class="draw-button toggle">Add resistor</button>
+    <button data-type="capacitor" class="draw-button toggle">Add capacitor</button>
+    <button data-type="header" class="draw-button toggle">Add header</button>
+</aside>
+<script src="js/pcb-loader.js"></script>
+<script src="js/cursor.js"></script>
+<script src="js/drawing.js"></script>
+<script src="js/editing.js"></script>
+</body>
+</html>

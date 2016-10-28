@@ -1,0 +1,140 @@
+(node) util.print is deprecated. Use console.log instead.
+.dummy {
+  color: red;
+}
+body,
+html {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  overflow: hidden;
+}
+body,
+td,
+th {
+  color: white;
+  font-family: sans-serif;
+}
+* {
+  box-sizing: border-box;
+}
+button {
+  border: 0;
+  background: #0099ff;
+  box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.7);
+  padding: 10px 20px;
+  margin-bottom: 5px;
+  color: white;
+}
+button:hover {
+  background: #33adff;
+}
+button.toggle {
+  background: #666;
+}
+button.toggle:hover {
+  background: #777;
+}
+button.toggle.active {
+  background: #0099ff;
+}
+button.toggle.active:hover {
+  background: #33adff;
+}
+.components .component {
+  position: absolute;
+  border: 1px solid white;
+  background: rgba(255, 255, 255, 0.1);
+  z-index: 15;
+}
+.components .component > * {
+  display: none;
+}
+.components .component:hover > div {
+  display: block;
+}
+.components .type-chip {
+  background: rgba(128, 128, 128, 0.3);
+}
+.components .type-chip .corner {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.5);
+  position: absolute;
+}
+.components .type-chip .corner:nth-of-type(1) {
+  top: 7px;
+  left: 7px;
+}
+.components .type-chip .corner:nth-of-type(2) {
+  top: 7px;
+  right: 7px;
+}
+.components .type-chip .corner:nth-of-type(3) {
+  bottom: 7px;
+  right: 7px;
+}
+.components .type-chip .corner:nth-of-type(4) {
+  bottom: 7px;
+  left: 7px;
+}
+.components .type-chip .corner.active {
+  background: white;
+}
+.components .type-resistor {
+  border: 1px solid #82f9ff;
+}
+.components .type-capacitor {
+  border: 1px solid #ffd996;
+}
+main {
+  background: #555;
+  float: left;
+  width: 80vw;
+  height: 100%;
+  padding: 15px;
+}
+main > section {
+  min-height: 150px;
+  margin-bottom: 15px;
+  position: relative;
+}
+main > section .selector {
+  z-index: 10;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: calc(100% - 40px);
+  height: calc(100% - 40px);
+  line-height: 115px;
+  text-align: center;
+  background: #0099ff;
+}
+main .pcb {
+  position: relative;
+  box-shadow: 0 0 16px 0 rgba(0, 0, 0, 0.6);
+}
+main .cursor {
+  z-index: 1000;
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  border-radius: 0 50% 50% 50%;
+  background: red;
+}
+main canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+aside {
+  background: #333;
+  float: right;
+  width: 20vw;
+  height: 100%;
+  padding: 15px;
+}
+aside h2 {
+  font-size: 16px;
+}
