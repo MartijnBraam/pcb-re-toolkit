@@ -34,10 +34,32 @@
     <button data-type="resistor" class="draw-button toggle">Add resistor</button>
     <button data-type="capacitor" class="draw-button toggle">Add capacitor</button>
     <button data-type="header" class="draw-button toggle">Add header</button>
+    <h2>Edit</h2>
+    <div id="component-editor">
+        <div id="no-component-selected">
+            No component selected
+        </div>
+        <div id="edit-chip" class="editor">
+            <label for="edit-chip-name">Chip name</label>
+            <input type="text" id="edit-chip-name">
+            <label for="edit-chip-pins">Pin count</label>
+            <input type="number" id="edit-chip-pins">
+            <label for="edit-chip-pin-spacing">Pin spacing</label>
+            <input type="number" id="edit-chip-pin-spacing">
+            <label for="edit-chip-pin-offset">Pin offset</label>
+            <input type="number" id="edit-chip-pin-offset">
+            <label>Pin directions</label>
+            <label><input type="checkbox" id="edit-chip-pins-top"> Top</label>
+            <label><input type="checkbox" id="edit-chip-pins-bottom"> Bottom</label>
+            <label><input type="checkbox" id="edit-chip-pins-left"> Left</label>
+            <label><input type="checkbox" id="edit-chip-pins-right"> Right</label>
+        </div>
+    </div>
 </aside>
 <script src="js/pcb-loader.js"></script>
 <script src="js/cursor.js"></script>
 <script src="js/drawing.js"></script>
 <script src="js/editing.js"></script>
+<script src="js/chip.js"></script>
 </body>
 </html>

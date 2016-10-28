@@ -1,13 +1,13 @@
 var drawMode = 'none';
 var mouseDown = false;
 var currentObject = null;
-var drawButtons = [];
+var components = [];
 document.addEventListener("DOMContentLoaded", function () {
-    drawButtons = document.querySelectorAll('.draw-button');
+    components = document.querySelectorAll('.draw-button');
     var addChipButton = document.getElementById('add-chip');
 
-    for (var i = 0; i < drawButtons.length; i++) {
-        drawButtons[i].addEventListener('click', function (event) {
+    for (var i = 0; i < components.length; i++) {
+        components[i].addEventListener('click', function (event) {
             if (this.classList.contains('active')) {
                 drawMode = 'none';
                 disableAllDraws();
@@ -36,8 +36,8 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 function disableAllDraws() {
-    for (var i = 0; i < drawButtons.length; i++) {
-        drawButtons[i].classList.remove('active');
+    for (var i = 0; i < components.length; i++) {
+        components[i].classList.remove('active');
     }
 }
 
@@ -74,11 +74,27 @@ function drawMouseUp(event) {
 
         var type = currentObject.getAttribute('data-type');
         if (type == 'chip') {
+            var rect = currentObject.getBoundingClientRect();
+            var width = rect.width;
+            var height = rect.height;
+            if (height > width) {
+                var defaultSpacing = height / 4;
+            } else {
+                var defaultSpacing = width / 4;
+            }
+            currentObject.setAttribute('data-name', 'chip');
+            currentObject.setAttribute('data-pins', 8);
+            currentObject.setAttribute('data-pin-spacing', defaultSpacing);
+            currentObject.setAttribute('data-pin-offset', defaultSpacing / 2);
+            currentObject.setAttribute('data-directions', 'lr');
+            rebuildChip(currentObject);
             for (var cornerId = 0; cornerId < 4; cornerId++) {
                 var corner = document.createElement('div');
                 corner.classList.add('corner');
                 if (cornerId == 0) {
                     corner.classList.add('active');
+                } else {
+                    corner.classList.add('hide')
                 }
                 currentObject.appendChild(corner);
             }
