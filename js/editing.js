@@ -82,8 +82,8 @@ function bindChipEditor() {
         var element = document.getElementById(elements[i]);
         element.addEventListener('change', function (event) {
             var setting = this.id.replace('edit-chip-', '');
-            currentObject.setAttribute('data-' + setting, this.value);
-            rebuildChip(currentObject);
+            selectedComponent.setAttribute('data-' + setting, this.value);
+            rebuildChip(selectedComponent);
         });
     }
 }
