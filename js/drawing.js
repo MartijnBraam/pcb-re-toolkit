@@ -87,17 +87,8 @@ function drawMouseUp(event) {
             currentObject.setAttribute('data-pin-spacing', defaultSpacing);
             currentObject.setAttribute('data-pin-offset', defaultSpacing / 2);
             currentObject.setAttribute('data-directions', 'lr');
+            currentObject.setAttribute('data-origin', 'tl');
             rebuildChip(currentObject);
-            for (var cornerId = 0; cornerId < 4; cornerId++) {
-                var corner = document.createElement('div');
-                corner.classList.add('corner');
-                if (cornerId == 0) {
-                    corner.classList.add('active');
-                } else {
-                    corner.classList.add('hide')
-                }
-                currentObject.appendChild(corner);
-            }
         }
     }
 }

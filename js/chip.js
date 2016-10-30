@@ -36,4 +36,22 @@ function rebuildChip(element) {
             }
         }
     }
+
+    var corners = ['tl', 'tr', 'br', 'bl'];
+
+    var origin = element.getAttribute('data-origin');
+
+    for (var cornerId = 0; cornerId < corners.length; cornerId++) {
+        var corner = document.createElement('div');
+        corner.classList.add('corner');
+        corner.classList.add('corner-' + corners[cornerId]);
+        corner.setAttribute('data-corner', corners[cornerId]);
+
+        if (corners[cornerId] == origin) {
+            corner.classList.add('active');
+        } else {
+            corner.classList.add('hide')
+        }
+        element.appendChild(corner);
+    }
 }
