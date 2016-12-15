@@ -77,10 +77,11 @@ function drawMouseUp(event) {
             var rect = currentObject.getBoundingClientRect();
             var width = rect.width;
             var height = rect.height;
+            var defaultSpacing;
             if (height > width) {
-                var defaultSpacing = height / 4;
+                defaultSpacing = height / 4;
             } else {
-                var defaultSpacing = width / 4;
+                defaultSpacing = width / 4;
             }
             currentObject.setAttribute('data-name', 'chip');
             currentObject.setAttribute('data-pins', 8);

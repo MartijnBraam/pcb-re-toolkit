@@ -1,3 +1,4 @@
+(node) util.print is deprecated. Use console.log instead.
 .dummy {
   color: red;
 }
@@ -19,7 +20,7 @@ th {
 }
 button {
   border: 0;
-  background: #09f;
+  background: #0099ff;
   box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.7);
   padding: 10px 20px;
   margin-bottom: 5px;
@@ -35,7 +36,7 @@ button.toggle:hover {
   background: #777;
 }
 button.toggle.active {
-  background: #09f;
+  background: #0099ff;
 }
 button.toggle.active:hover {
   background: #33adff;
@@ -53,7 +54,7 @@ button.toggle.active:hover {
   display: block;
 }
 .components .component.selected {
-  box-shadow: 0 0 8px 0 #09f;
+  box-shadow: 0 0 8px 0 #0099ff;
 }
 .components .type-chip {
   background: rgba(128, 128, 128, 0.3);
@@ -137,7 +138,7 @@ main > section .selector {
   height: calc(100% - 40px);
   line-height: 115px;
   text-align: center;
-  background: #09f;
+  background: #0099ff;
 }
 main .pcb {
   position: relative;
